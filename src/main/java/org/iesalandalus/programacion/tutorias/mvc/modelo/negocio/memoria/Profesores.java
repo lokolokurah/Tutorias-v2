@@ -1,4 +1,4 @@
-package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio;
+package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.memoria;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -7,8 +7,9 @@ import java.util.List;
 import javax.naming.OperationNotSupportedException;
 
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Profesor;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.IProfesores;
 
-public class Profesores {
+public class Profesores implements IProfesores {
 
 	private List<Profesor> coleccionProfesores;
 	
@@ -17,6 +18,7 @@ public class Profesores {
 		coleccionProfesores = new ArrayList<>();
 	}
 	
+	@Override
 	public List<Profesor> get() 
 	{
 		List<Profesor> profesoresOrdenados = copiaProfundaProfesores();
@@ -34,11 +36,13 @@ public class Profesores {
 		return copiaProfesores;
 	}
 	
+	@Override
 	public int getTamano() 
 	{
 		return coleccionProfesores.size();
 	}
 	
+	@Override
 	public void insertar(Profesor profesor) throws OperationNotSupportedException
 	{
 		if (profesor == null) 
@@ -55,6 +59,7 @@ public class Profesores {
 		
 	}
 
+	@Override
 	public Profesor buscar(Profesor profesor) 
 	{
 		if (profesor == null) 
@@ -70,6 +75,7 @@ public class Profesores {
 		}
 	}
 	
+	@Override
 	public void borrar(Profesor profesor) throws OperationNotSupportedException 
 	{
 		if (profesor == null) 
