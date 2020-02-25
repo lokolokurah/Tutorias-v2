@@ -1,6 +1,7 @@
 package org.iesalandalus.programacion.tutorias.mvc.modelo.negocio;
 
 import static org.hamcrest.CoreMatchers.is;
+
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 import static org.mockito.Mockito.verify;
@@ -13,7 +14,7 @@ import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.tutorias.mvc.modelo.FactoriaFuenteDatos;
+import org.iesalandalus.programacion.tutorias.mvc.modelo.negocio.FactoriaFuenteDatos;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.IModelo;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.Modelo;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Alumno;

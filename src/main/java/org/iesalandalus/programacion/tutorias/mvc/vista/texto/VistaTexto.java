@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.naming.OperationNotSupportedException;
 
-import org.iesalandalus.programacion.tutorias.mvc.controlador.Controlador;
+import org.iesalandalus.programacion.tutorias.mvc.controlador.IControlador;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Alumno;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Cita;
 import org.iesalandalus.programacion.tutorias.mvc.modelo.dominio.Profesor;
@@ -14,7 +14,7 @@ import org.iesalandalus.programacion.tutorias.mvc.vista.IVista;
 
 public class VistaTexto implements IVista {
 
-	private Controlador controlador;
+	private IControlador controlador;
 	
 	public VistaTexto() 
 	{
@@ -22,7 +22,7 @@ public class VistaTexto implements IVista {
 	}
 	
 	@Override
-	public void setControlador(Controlador controlador)
+	public void setControlador(IControlador controlador)
 	{
 		this.controlador = controlador;
 	}
